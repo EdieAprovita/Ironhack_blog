@@ -42,6 +42,9 @@ app.use(logger('dev'));
 const index = require('./routes/index');
 app.use('/', index);
 
+const article = require('./routes/articles-routes');
+app.use('/articles', article);
+
 // Uncomment this line for production
 // app.get('/*', (req, res) => res.sendFile(__dirname + '/public/index.html'));
 

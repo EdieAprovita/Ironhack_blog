@@ -23,11 +23,13 @@ exports.createArticle = async (req, res) => {
   try {
     const { title, article, authorName } = req.body;
 
-    const article = await Article.create({
+    const articled = await Article.create({
       title,
       article,
       authorName,
     });
+
+    res.status(201).json({articled})
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -38,7 +40,7 @@ exports.updateArticle = async (req, res) => {
     const { id } = req.params;
     const { title, article, authorName } = req.body;
 
-    const article = await Article.findByIdAndUpdate(id, {
+    const articled = await Article.findByIdAndUpdate(id, {
       title,
       article,
       authorName,
