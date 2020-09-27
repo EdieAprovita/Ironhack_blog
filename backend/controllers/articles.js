@@ -3,7 +3,7 @@ const Article = require('../models/Article');
 exports.getAllArticles = async (req, res) => {
   try {
     const articles = await Article.find();
-    res.status(200).json({ articles });
+    res.status(200).json({ message: 'This are all the articles', articles });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -13,7 +13,9 @@ exports.getArticle = async (req, res) => {
   try {
     const { id } = req.params;
     const article = await Article.findById(id);
-    res.status(200).json({ article });
+    res
+      .status(200)
+      .json({ message: `This is the you request article:${article}` });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -29,7 +31,9 @@ exports.createArticle = async (req, res) => {
       authorName,
     });
 
-    res.status(201).json({articled})
+    res
+      .status(201)
+      .json({ message: `This is the new article you created: ${articled}` });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -46,7 +50,9 @@ exports.updateArticle = async (req, res) => {
       authorName,
     });
 
-    res.status(200).json({ article });
+    res
+      .status(200)
+      .json({ message: `This is the updated article: ${articled}` });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
