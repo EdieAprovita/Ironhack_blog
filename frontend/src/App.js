@@ -1,19 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import Homapge from './components/Homepage';
+import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import Articles from './components/Articles';
 
-const App = () => {
-  <div className='container'>
+const App = () => (
+  <div className='container-fluid'>
     <Navbar />
-    <Router>
-      <Switch>
-        <Route />
-      </Switch>
-    </Router>
-  </div>;
-};
+    <Switch>
+      <Route exact path='/' component={Homepage} />
+      <Route path='/articles' component={Articles} />
+    </Switch>
+  </div>
+);
 
 export default App;
