@@ -13,9 +13,7 @@ exports.getArticle = async (req, res) => {
   try {
     const { id } = req.params;
     const article = await Article.findById(id);
-    res
-      .status(200)
-      .json({ message: `This is the you request article:${article}` });
+    res.status(200).json({ article });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -31,9 +29,7 @@ exports.createArticle = async (req, res) => {
       authorName,
     });
 
-    res
-      .status(201)
-      .json({ message: `This is the new article you created: ${articled}` });
+    res.status(201).json({ articled });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
@@ -50,9 +46,7 @@ exports.updateArticle = async (req, res) => {
       authorName,
     });
 
-    res
-      .status(200)
-      .json({ message: `This is the updated article: ${articled}` });
+    res.status(200).json({ articled });
   } catch (error) {
     res.status(400).json({ message: `${error}` });
   }
