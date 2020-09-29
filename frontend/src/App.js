@@ -3,10 +3,12 @@ import { Switch, Route } from 'react-router-dom';
 
 import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
+import Header from './components/Header';
 import Articles from './components/Articles';
 
 const App = () => (
   <div className='container-fluid'>
+    <Header />
     <Navbar />
     <Switch>
       <Route exact path='/' component={Homepage} />

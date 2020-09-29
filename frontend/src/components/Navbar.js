@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='container-fluid'>
       <nav className='navbar navbar-expand-lg navbar-dark bg-dark'>
-        <Link className='navbar-brand' to='7'>
+        <Link className='navbar-brand' to='/'>
           IRONHACK BLOG
         </Link>
         <button
