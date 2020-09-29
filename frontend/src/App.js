@@ -6,7 +6,7 @@ import './App.css';
 import Homepage from './components/Homepage';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
-import Articles from './components/Articles';
+import ProjectList from './components/Articles/ProjectList';
 
 const App = () => (
   <div className='container-fluid'>
@@ -14,7 +14,7 @@ const App = () => (
     <Navbar />
     <Switch>
       <Route exact path='/' component={Homepage} />
-      <Route path='/articles' component={Articles} />
+      <Route path='/articles' component={ProjectList} />
     </Switch>
   </div>
 );
