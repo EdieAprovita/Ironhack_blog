@@ -1,7 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  font-size: 30px;
+  padding-right: 16.5rem !important;
+}
+
 #header-img {
   height: 25rem;
   width: 100%;
-  opacity: .6;
 }
 
 .header-title {

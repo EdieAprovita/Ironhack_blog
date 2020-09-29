@@ -1,5 +1,4 @@
 import React from 'react';
-import './Header.css';
 
 import Background from '../assets/background.jpg';
 
