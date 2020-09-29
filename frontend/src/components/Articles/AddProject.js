@@ -27,7 +27,28 @@ const AddProject = (props) => {
 
   return (
     <div className='container-fluid'>
-      <h1>Add Article</h1>
+      <form onSubmit={handleFormSubmit}>
+        <label>Title:</label>
+        <input
+          type='text'
+          name='title'
+          value={setForm.title}
+          onChange={(e) => handleChange(e)}
+        />
+        <label>Article:</label>
+        <textarea
+          name='text'
+          value={setForm.article}
+          onChange={(e) => handleChange(e)}
+        ></textarea>
+        <label>AuthorName:</label>
+        <input
+          type='text'
+          name='authorName'
+          value={setForm.authorName}
+          onChange={(e) => handleChange(e)}
+        />
+      </form>
     </div>
   );
 };
