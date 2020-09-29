@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  background-color: gray;
+}
+
 .nav-link {
   font-size: 30px;
   padding-right: 16.5rem !important;
